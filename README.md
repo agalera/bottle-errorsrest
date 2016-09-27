@@ -25,6 +25,11 @@ def example():
     # {'message': 'oh no!'}
     raise HTTPError(500, "oh no!")
 
+@get("/2")
+def example2():
+    # {'other_Example': 'oh no!'}
+    raise HTTPError(500, {'other_Example': 'oh no!'})
+
 
 install(ErrorsRestPlugin())
 
@@ -41,7 +46,16 @@ Server: WSGIServer/0.2 CPython/3.4.3
 Content-Type: application/json
 Content-Length: 20
 
-{"prueba": "oh no!"}
+{"message": "oh no!"}
+
+curl http://localhost:9988/2 --head; curl http://localhost:9988/2
+HTTP/1.0 500 Internal Server Error
+Date: Tue, 27 Sep 2016 11:16:41 GMT
+Server: WSGIServer/0.2 CPython/3.4.3
+Content-Type: application/json
+Content-Length: 20
+
+{"other_Example": "oh no!"}
 
 curl http://localhost:9988/not_found --head; curl http://localhost:9988/not_found
 HTTP/1.0 404 Not Found
