@@ -11,7 +11,7 @@ Via pip:
 ```pip install bottle_errorsrest```
 
 Or clone:
-```git clone https://github.com/kianxineki/bottle_errorsrest.git```
+```git clone https://github.com/agalera/bottle_errorsrest.git```
 
 
 ## example server:

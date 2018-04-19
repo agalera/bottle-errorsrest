@@ -32,7 +32,7 @@ setup(
     long_description=readme,
     author='Alberto Galera Jimenez',
     author_email='galerajimenez@gmail.com',
-    url='https://github.com/kianxineki/bottle-errorsrest',
+    url='https://github.com/agalera/bottle-errorsrest',
     py_modules=['bottle_errorsrest'],
     include_package_data=True,
     install_requires=['bottle'],
