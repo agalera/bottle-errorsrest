@@ -27,7 +27,7 @@ readme = read_md('README.md')
 
 setup(
     name='bottle_errorsrest',
-    version='0.0.2',
+    version='0.0.3',
     description='ErrorsRest plugin for bottle',
     long_description=readme,
     author='Alberto Galera Jimenez',
